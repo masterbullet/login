@@ -1,0 +1,105 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        function updateWorkingStatus() {
+            document.getElementById('workingStatus').classList.add('text-green-500');
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-1/5 bg-gray-800 h-screen p-4">
+            <div class="text-2xl font-bold mb-6">OPEN BULLET</div>
+            <div class="text-lg font-semibold mb-4">Total Data</div>
+            <ul class="space-y-2">
+                <li id="workingStatus" class="text-green-500">Working = 90%</li>
+                <li class="text-red-500">Failed = 5%</li>
+                <li class="text-yellow-500">Total Hits = No Data</li>
+                <li class="text-blue-300">Retried = 5%</li>
+            </ul>
+            <div class="text-lg font-semibold mt-6 mb-4">Manage</div>
+        </div>
+        <!-- Main Content -->
+        <div class="w-4/5 p-4">
+            <div class="text-xl font-bold mb-4">Dashboard Options:</div>
+            <div class="flex items-center space-x-2 mb-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">+ Add Group</button>
+                <button class="bg-green-500 text-white px-4 py-2 rounded">Import Proxies</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded">Start Proxies</button>
+                <button class="bg-orange-500 text-white px-4 py-2 rounded" onclick="updateWorkingStatus()">Hits</button>
+                <button class="bg-purple-500 text-white px-4 py-2 rounded">Configs</button>
+            </div>
+            <div class="mb-4">
+                <label for="pingSelection" class="block mb-2">Selection Pings:</label>
+                <select id="pingSelection" class="bg-gray-700 text-white p-2 rounded w-full">
+                    <option>&lt;&gt;</option>
+                    <option>100</option>
+                    <option>500</option>
+                    <option>1000</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="mainTargetSelection" class="block mb-2">Selection Main Target:</label>
+                <select id="mainTargetSelection" class="bg-gray-700 text-white p-2 rounded w-full">
+                    <option>Dark Stocks</option>
+                    <option>Private Stocks</option>
+                    <option>PremiumStockers</option>
+                </select>
+            </div>
+            <div class="bg-gray-800 p-4 rounded mt-4">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr>
+                            <th class="p-2">Name</th>
+                            <th class="p-2">Proxy</th>
+                            <th class="p-2">Status</th>
+                            <th class="p-2">Publisher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2">Netflix</td>
+                            <td class="p-2">******</td>
+                            <td class="p-2">Failed</td>
+                            <td class="p-2">PremiumStockers</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">Spotify</td>
+                            <td class="p-2">******</td>
+                            <td class="p-2">Running</td>
+                            <td class="p-2">PremiumStockers</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">Crunchyroll</td>
+                            <td class="p-2">******</td>
+                            <td class="p-2">Running</td>
+                            <td class="p-2">PremiumStockers</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">Primevideo</td>
+                            <td class="p-2">******</td>
+                            <td class="p-2">Pass</td>
+                            <td class="p-2">PremiumStockers</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">Ubisoft</td>
+                            <td class="p-2">******</td>
+                            <td class="p-2">Running</td>
+                            <td class="p-2">PremiumStockers</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">All in One</td>
+                            <td class="p-2">******</td>
+                            <td class="p-2">Pass</td>
+                            <td class="p-2">PremiumStockers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
